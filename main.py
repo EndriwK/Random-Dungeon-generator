@@ -123,6 +123,7 @@ while True:
 	room_height = random.randint(2, 7)
 	rpr = random.choice(room_purpose)
 
+ # printing stuff on screen
 	print("----" * 10)
 	print(f'the room is {size} and {shape}, it is {room_height}m tall')
 	print(f'the seen room is a {rpr}')
@@ -163,6 +164,8 @@ while True:
 		if trp == 'sticky floor':
 			print(f'the room has a sticky floor and a {mon}')
 		print(f'you see {trp}')
+
+  # While loop breaking mechanic
 	cont = int(input('Do you want to continue? [0/1]'))
 	if cont == 1:
 		continue
