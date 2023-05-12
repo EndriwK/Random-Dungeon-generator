@@ -43,7 +43,7 @@ content = random.choice(room_contents)
 
 # Define room dimensions based on size
 
-while True:
+def mainloop():
 	if size == "small":
 		width = random.randint(5, 7)
 		height = random.randint(5, 7)
@@ -165,13 +165,11 @@ while True:
 			print(f'the room has a sticky floor and a {mon}')
 		print(f'you see {trp}')
 
-  # While loop breaking mechanic
-	cont = int(input('Do you want to continue? [0/1]'))
-	if cont == 1:
-		continue
-	elif cont == 0:
-		print('Thanks for playing!')
-		break
-	else:
-		print('Invalid answer, will continue.')
-		continue
+ # Mainloop continuing
+continue = str(input('Do you want to continue? [y/n]'))
+if continue == 'y':
+    mainloop()
+    continue
+else:
+    print('Finishing Program')
+    break
